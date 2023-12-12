@@ -5,6 +5,7 @@ import logo from './images/logo.png'
 import Inventory from './Pages/Inventory';
 import Manage from './Pages/Manage';
 import Shop from './Pages/Shop';
+import { NotFound } from './Pages/NotFound';
 function App() {
   return (
     <div className='header'>
@@ -17,9 +18,11 @@ function App() {
         </ul>
       </nav>
       <Routes>
+        <Route path="/" element={<Shop />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/manage" element={<Manage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     
     </div>

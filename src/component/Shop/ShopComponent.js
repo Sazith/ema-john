@@ -25,7 +25,7 @@ const ShopComponent = () => {
     <div className="product-container">
       {
         products.map((product, i) => (
-          <Product product={product} key={i} handleAddrpoduct={handleAddrpoduct}></Product>
+          <Product product={product} key={i} showAddtoCart={true} handleAddrpoduct={handleAddrpoduct}></Product>
         ))
       }
     

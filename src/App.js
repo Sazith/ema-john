@@ -9,6 +9,7 @@ import { NotFound } from './Pages/NotFound';
 import { useEffect, useState } from 'react';
 import PacmanLoader from "react-spinners/PacmanLoader";
 import Home from './Pages/Home';
+import ProductDetails from './component/ProductDetails/ProductDetails';
 
 const override = {
   display: "flex",
@@ -59,6 +60,7 @@ function App() {
               <Route path="/shop" element={<Shop />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/manage" element={<Manage />} />
+              <Route path="/product/:productKey" element={<ProductDetails />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

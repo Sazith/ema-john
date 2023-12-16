@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
+import Inventory from '../../Pages/Inventory';
+
 
 const Cart = (props) => {
   const cart = props.cart;
@@ -36,8 +39,16 @@ const Cart = (props) => {
        <p><small>Shipping Cost : {shipping} </small></p>
        <p><small>Tax + vat :{tax} </small></p>
        <p>Total Price : {grandTotal}</p>
+       <Link to='/inventory' >
+       <button className='main-button'>
+        Review Order : 
+        </button>
+       </Link>
+       <Routes>
+        <Route path="/inventory" element={<Inventory />} /> 
+         </Routes>
     </div>
-  );
-};
+  )
+}
 
 export default Cart;

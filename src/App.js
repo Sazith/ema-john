@@ -55,10 +55,11 @@ function App() {
               </ul>
             </nav>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" exact element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/inventory" element={<Inventory />} />
+              {/* <Route path="shop/inventory" element={<Inventory />} /> */}
               <Route path="/manage" element={<Manage />} />
               <Route path="/product/:productKey" element={<ProductDetails />} />
               <Route path="*" element={<NotFound />} />
